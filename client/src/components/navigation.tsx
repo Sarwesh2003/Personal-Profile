@@ -44,7 +44,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl text-navy">Sarwesh Khairnar</div>
@@ -80,16 +80,16 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-3 py-2 transition-colors ${
+                className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
                   activeSection === item.id
-                    ? "text-gold font-semibold"
-                    : "text-charcoal hover:text-navy"
+                    ? "text-gold font-semibold bg-gold/10"
+                    : "text-charcoal hover:text-navy hover:bg-navy/5"
                 }`}
               >
                 {item.label}

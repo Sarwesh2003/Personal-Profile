@@ -9,11 +9,11 @@ export default function ExperienceSection() {
       period: "Jul 2024 - Present",
       location: "Mumbai, India",
       icon: Briefcase,
-      color: "gold",
+      bgColor: "bg-gold",
       achievements: [
-        "Working as Full Stack Application Developer with expertise in Java, Spring Boot, ReactJS, AngularJS, Oracle SQL, and Kubernetes",
-        "Developed end-to-end system features for Foreign Exchange operations, contributing to settlement engine processing 700k+ daily transactions",
-        "Engineered database optimization tools and visualization utilities to enhance system performance and team productivity"
+        "Leading full-stack development initiatives with expertise in Java, Spring Boot, ReactJS, AngularJS, Oracle SQL, and Kubernetes",
+        "Architected and delivered end-to-end system features for Foreign Exchange operations, driving innovation in financial technology",
+        "Engineered database optimization tools and visualization utilities, significantly enhancing system performance and team productivity"
       ]
     },
     {
@@ -22,10 +22,10 @@ export default function ExperienceSection() {
       period: "Jan 2024 - Jun 2024",
       location: "Mumbai, India",
       icon: GraduationCap,
-      color: "navy",
+      bgColor: "bg-navy",
       achievements: [
-        "Collaborated with cross-functional teams to optimize system performance and enhance functionality",
-        "Built utility tools for visualizing settlement life-cycle, improving team understanding and operational efficiency"
+        "Led cross-functional collaboration to optimize system performance and enhance functionality across multiple teams",
+        "Spearheaded development of visualization tools for settlement life-cycle, transforming team understanding and operational efficiency"
       ]
     },
     {
@@ -34,11 +34,11 @@ export default function ExperienceSection() {
       period: "Jun 2023 - Jul 2023",
       location: "Bengaluru, India",
       icon: Code,
-      color: "charcoal",
+      bgColor: "bg-charcoal",
       achievements: [
-        "Collaborated with SoR team to devise archival solution, reducing unnecessary log data and improving system efficiency",
-        "Designed REST API in Java Spring Boot to optimize query performance and address duplicate records",
-        "Developed comprehensive unit tests for automation scripts, ensuring reliability and accuracy"
+        "Led SoR team collaboration to architect innovative archival solution, dramatically improving system efficiency",
+        "Designed and implemented high-performance REST API in Java Spring Boot, solving complex data optimization challenges",
+        "Championed quality assurance by developing comprehensive unit tests, ensuring automation script reliability"
       ]
     }
   ];
@@ -71,7 +71,7 @@ export default function ExperienceSection() {
                 viewport={{ once: true }}
                 className="flex flex-col lg:flex-row items-start"
               >
-                <div className={`hidden lg:flex w-16 h-16 bg-${exp.color} rounded-full items-center justify-center relative z-10 mr-8`}>
+                <div className={`hidden lg:flex w-16 h-16 ${exp.bgColor} rounded-full items-center justify-center relative z-10 mr-8`}>
                   <exp.icon className="text-white" size={24} />
                 </div>
                 <div className="flex-1 bg-white p-8 rounded-xl shadow-lg">

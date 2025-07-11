@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-navy to-blue-900">
+    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-navy via-blue-800 to-blue-900">
       <div className="absolute inset-0 bg-gradient-to-r from-navy/50 to-transparent"></div>
       
       {/* Animated background elements */}

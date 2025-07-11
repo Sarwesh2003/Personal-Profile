@@ -51,6 +51,11 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
+        // Custom portfolio colors
+        navy: "var(--navy)",
+        charcoal: "var(--charcoal)",
+        gold: "var(--gold)",
+        "light-gray": "var(--light-gray)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",

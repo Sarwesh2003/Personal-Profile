@@ -31,13 +31,14 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold text-navy">
-              Passionate Software Engineer | Tech Enthusiast | Innovating for Positive Change
+              Award-Winning Leader | International Hackathon Champion | Innovating for Social Impact
             </h3>
             
             <p className="text-lg text-charcoal leading-relaxed">
-              I'm driven by technology's potential to transform lives. With a focus on innovative problem-solving, 
-              I create solutions that make a positive impact on society. From building apps that serve millions to 
-              leading international hackathon victories, I believe in the power of code to create meaningful change.
+              I'm a passionate software engineer who leads teams to victory on the world's biggest stages. 
+              From winning the UNESCO India-Africa International Hackathon representing India against 22 countries, 
+              to creating solutions that impact 2+ crore lives, I combine technical excellence with visionary leadership 
+              to build a better tomorrow.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
