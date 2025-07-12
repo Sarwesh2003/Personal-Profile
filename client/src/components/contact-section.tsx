@@ -138,7 +138,8 @@ export default function ContactSection() {
                     </div>
                   </a>
                   <a
-                    href="#"
+                    href="/attached_assets/Sarwesh_Resume_1752258083677.pdf"
+                    download="Sarwesh_Khairnar_Resume.pdf"
                     className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
                   >
                     <Download className="text-gold text-2xl mr-4" />
