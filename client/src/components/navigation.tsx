@@ -40,6 +40,7 @@ export default function Navigation() {
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "achievements", label: "Achievements" },
+    { id: "coding-profiles", label: "Coding" },
     { id: "contact", label: "Contact" },
   ];
 
