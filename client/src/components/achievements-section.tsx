@@ -4,7 +4,7 @@ import { Medal, Globe, Trophy, GraduationCap, FileText, Code } from "lucide-reac
 export default function AchievementsSection() {
   const achievements = [
     {
-      title: "Gold Medal",
+      title: "Received Gold Medal from Vice President",
       subtitle: "Vice President & Education Minister of India",
       description: "Honored for exceptional win in UNESCO India-Africa International Hackathon",
       icon: Medal,

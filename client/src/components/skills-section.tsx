@@ -117,7 +117,7 @@ export default function SkillsSection() {
             <Users className="text-gold mr-3" size={24} />
             Soft Skills & Leadership
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {softSkills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -125,10 +125,10 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-4 bg-gradient-to-br from-navy to-blue-900 text-white rounded-lg"
+                className="text-center p-4 bg-gradient-to-br from-navy to-blue-900 text-white rounded-lg min-w-0"
               >
                 <skill.icon className="text-gold text-2xl mb-2 mx-auto" size={24} />
-                <p className="font-medium">{skill.name}</p>
+                <p className="font-medium text-sm break-words">{skill.name}</p>
               </motion.div>
             ))}
           </div>
