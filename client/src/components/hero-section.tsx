@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown, User } from "lucide-react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import professionalPhoto from "@assets/DSC_1213_1752313440174.jpg";
+import professionalPhoto from "@assets/DSC_1217_copy_1752314080699.jpg";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -56,7 +56,7 @@ export default function HeroSection() {
             <img
               src={professionalPhoto}
               alt="Sarwesh Khairnar - Professional Photo"
-              className="w-full h-full object-cover object-center scale-110"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </motion.div>
