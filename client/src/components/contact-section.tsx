@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Download } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Download, Twitter, Instagram } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import resumePdf from "@assets/Sarwesh_Resume_1752258083677.pdf";
 import { Button } from "@/components/ui/button";
@@ -147,6 +147,30 @@ export default function ContactSection() {
                     <div>
                       <p className="font-medium text-navy">Download Resume</p>
                       <p className="text-charcoal text-sm">PDF format</p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://x.com/_int_32"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <Twitter className="text-blue-500 text-2xl mr-4" />
+                    <div>
+                      <p className="font-medium text-navy">Follow on X</p>
+                      <p className="text-charcoal text-sm">@_int_32</p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/sarweshk_10/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <Instagram className="text-pink-500 text-2xl mr-4" />
+                    <div>
+                      <p className="font-medium text-navy">Follow on Instagram</p>
+                      <p className="text-charcoal text-sm">@sarweshk_10</p>
                     </div>
                   </a>
                 </div>
