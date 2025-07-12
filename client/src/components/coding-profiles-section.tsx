@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Code, Trophy, Target, TrendingUp, Star, Award } from "lucide-react";
-import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiTwitter } from "react-icons/si";
+import { Code, Trophy, Target, TrendingUp, Star, Award, Twitter } from "lucide-react";
+import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
 
 export default function CodingProfilesSection() {
   const profiles = [
@@ -132,9 +132,9 @@ export default function CodingProfilesSection() {
         >
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg inline-block">
             <div className="flex items-center justify-center">
-              <SiTwitter className="text-blue-500 mr-3" size={24} />
+              <Twitter className="text-blue-500 mr-3" size={24} />
               <div className="text-left">
-                <h4 className="text-lg font-semibold text-navy">Follow me on Twitter</h4>
+                <h4 className="text-lg font-semibold text-navy">Follow me on X</h4>
                 <p className="text-charcoal">@_int_32</p>
               </div>
               <a
