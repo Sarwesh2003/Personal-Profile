@@ -8,8 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
 const contactFormSchema = z.object({
@@ -34,29 +32,25 @@ export default function ContactSection() {
     }
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again later or contact me directly via email.",
-        variant: "destructive",
-      });
-    }
-  });
-
   const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+    // Create mailto link with form data
+    const emailSubject = encodeURIComponent(data.subject);
+    const emailBody = encodeURIComponent(
+      `Hi Sarwesh,\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}\n\nBest regards,\n${data.name}`
+    );
+    const mailtoLink = `mailto:sarweshkhairnar@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast({
+      title: "Opening email client...",
+      description: "Your email client will open with the message pre-filled.",
+    });
+    
+    // Reset form
+    form.reset();
   };
 
   return (
@@ -233,17 +227,10 @@ export default function ContactSection() {
                   
                   <Button
                     type="submit"
-                    disabled={contactMutation.isPending}
                     className="w-full bg-navy hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                   >
-                    {contactMutation.isPending ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        <Send className="mr-2" size={16} />
-                        Send Message
-                      </>
-                    )}
+                    <Send className="mr-2" size={16} />
+                    Send Message
                   </Button>
                 </form>
               </CardContent>
