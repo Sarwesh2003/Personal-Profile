@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Download } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import resumePdf from "@assets/Sarwesh_Resume_1752258083677.pdf";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -138,7 +139,7 @@ export default function ContactSection() {
                     </div>
                   </a>
                   <a
-                    href="/attached_assets/Sarwesh_Resume_1752258083677.pdf"
+                    href={resumePdf}
                     download="Sarwesh_Khairnar_Resume.pdf"
                     className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
                   >
