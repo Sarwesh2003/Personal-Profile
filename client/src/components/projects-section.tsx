@@ -7,14 +7,14 @@ export default function ProjectsSection() {
     {
       title: "DISHA",
       subtitle: "Facility Locator for Disabled",
-      description: "Android mobile app providing comprehensive disabled-friendly facility information, making accessibility easier for millions of individuals across India.",
+      description: "Android app providing disabled-friendly facility information across India.",
       icon: Smartphone,
       bgColor: "from-blue-50 to-indigo-100",
       iconBg: "bg-navy",
       metric: "2+ Crore",
-      metricLabel: "Disabled People in India (Gov Initiative Impact)",
+      metricLabel: "People Impacted",
       metricIcon: Users,
-      technologies: ["Android", "Java", "Firebase", "Maps API"],
+      technologies: ["Android", "Java", "Firebase"],
       techColor: "bg-navy",
       achievement: "SIH'22 Winner",
       achievementIcon: Trophy,
@@ -24,14 +24,14 @@ export default function ProjectsSection() {
     {
       title: "eTaka",
       subtitle: "Soil Fertility Predictor",
-      description: "ML-powered system that predicts soil nutrients and fertility, providing crop recommendations to benefit India's agricultural community.",
+      description: "ML-powered system predicting soil nutrients with crop recommendations.",
       icon: Leaf,
       bgColor: "from-green-50 to-emerald-100",
       iconBg: "bg-green-600",
       metric: "97.5%",
-      metricLabel: "Prediction Accuracy",
+      metricLabel: "Accuracy",
       metricIcon: Percent,
-      technologies: ["Python", "Machine Learning", "Android", "Computer Vision"],
+      technologies: ["Python", "ML", "Android"],
       techColor: "bg-green-600",
       achievement: "Copyrighted",
       achievementIcon: Copyright,
@@ -41,35 +41,18 @@ export default function ProjectsSection() {
     {
       title: "Phish-Shield",
       subtitle: "Cyber-Security Solution",
-      description: "Multi-platform solution protecting users from fraudulent websites, featuring both mobile app and browser extension deployed on Mozilla Add-ons.",
+      description: "Multi-platform solution protecting users from fraudulent websites.",
       icon: Shield,
       bgColor: "from-red-50 to-orange-100",
       iconBg: "bg-red-600",
       metric: "87%",
-      metricLabel: "Detection Accuracy",
+      metricLabel: "Detection Rate",
       metricIcon: TrendingUp,
-      technologies: ["Python", "Flask", "Web Scraping", "ML"],
+      technologies: ["Python", "Flask", "ML"],
       techColor: "bg-red-600",
       achievement: "Firefox Extension",
       achievementIcon: FaFirefox,
       link: "#",
-      linkIcon: FaGithub
-    },
-    {
-      title: "Location Saver",
-      subtitle: "On-the-go Location Saver",
-      description: "Simple mobile app for saving locations on-the-go, built with least click principles and depth over breadth development approach using MVC architecture.",
-      icon: MapPin,
-      bgColor: "from-purple-50 to-violet-100",
-      iconBg: "bg-purple-600",
-      metric: "Minimal",
-      metricLabel: "Clicks Required",
-      metricIcon: Mouse,
-      technologies: ["Android", "Java", "MVC Architecture", "Location Services"],
-      techColor: "bg-purple-600",
-      achievement: "Open Source",
-      achievementIcon: FaGithub,
-      link: "https://github.com/Sarwesh2003/Location-Saver",
       linkIcon: FaGithub
     }
   ];
@@ -91,7 +74,7 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -99,45 +82,45 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`bg-gradient-to-br ${project.bgColor} p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2`}
+              className={`bg-gradient-to-br ${project.bgColor} p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2`}
             >
-              <div className="flex items-center mb-6">
-                <div className={`w-12 h-12 ${project.iconBg} rounded-lg flex items-center justify-center mr-4`}>
-                  <project.icon className="text-white" size={24} />
+              <div className="flex items-center mb-4">
+                <div className={`w-10 h-10 ${project.iconBg} rounded-lg flex items-center justify-center mr-3`}>
+                  <project.icon className="text-white" size={20} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy">{project.title}</h3>
-                  <p className="text-sm text-charcoal">{project.subtitle}</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold text-navy truncate">{project.title}</h3>
+                  <p className="text-xs text-charcoal truncate">{project.subtitle}</p>
                 </div>
               </div>
               
-              <div className="mb-6">
-                <div className="flex items-center mb-3">
-                  <project.metricIcon className="text-gold mr-2" size={20} />
-                  <span className="text-2xl font-bold text-navy">{project.metric}</span>
+              <div className="mb-4">
+                <div className="flex items-center mb-2">
+                  <project.metricIcon className="text-gold mr-2" size={16} />
+                  <span className="text-xl font-bold text-navy">{project.metric}</span>
                 </div>
-                <p className="text-sm text-charcoal">{project.metricLabel}</p>
+                <p className="text-xs text-charcoal">{project.metricLabel}</p>
               </div>
               
-              <p className="text-charcoal mb-6">
+              <p className="text-charcoal text-sm mb-4 line-clamp-2">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1 mb-4">
                 {project.technologies.map((tech, idx) => (
-                  <span key={idx} className={`px-3 py-1 ${project.techColor} text-white text-xs rounded-full`}>
+                  <span key={idx} className={`px-2 py-1 ${project.techColor} text-white text-xs rounded-full`}>
                     {tech}
                   </span>
                 ))}
               </div>
               
               <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <project.achievementIcon className="text-gold mr-2" size={16} />
-                  <span className="text-sm font-medium text-navy">{project.achievement}</span>
+                <div className="flex items-center min-w-0 flex-1">
+                  <project.achievementIcon className="text-gold mr-2 flex-shrink-0" size={14} />
+                  <span className="text-xs font-medium text-navy truncate">{project.achievement}</span>
                 </div>
-                <a href={project.link} className="text-gold hover:text-yellow-600 transition-colors">
-                  <project.linkIcon size={20} />
+                <a href={project.link} className="text-gold hover:text-yellow-600 transition-colors ml-2">
+                  <project.linkIcon size={16} />
                 </a>
               </div>
             </motion.div>
