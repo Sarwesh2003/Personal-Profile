@@ -40,7 +40,13 @@ Your professional portfolio website is now **deployment-ready** with three optim
 ```bash
 cd portfolio-deploy
 npm install
+npm run build:static
 npx vercel --prod
+```
+
+### Option 1A: One-Command Deployment
+```bash
+./deploy-static.sh
 ```
 
 ### Option 2: GitHub + Vercel

@@ -25,13 +25,19 @@ The `portfolio-deploy/` folder contains everything needed for deployment:
 
 3. **Build the project**:
    ```bash
-   npm run build
+   npm run build:static
    ```
 
 4. **Deploy to Vercel**:
    ```bash
    npx vercel --prod
    ```
+
+### Quick Deployment Script
+Run the automated deployment script:
+```bash
+./deploy-static.sh
+```
 
 ### Method B: GitHub Integration
 1. **Push to GitHub**:

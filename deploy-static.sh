@@ -1,40 +1,25 @@
 #!/bin/bash
 
-# Build script for static deployment
-echo "Building static portfolio website..."
+# Simple deployment script for Sarwesh's portfolio
+echo "🚀 Deploying Sarwesh's Portfolio to Vercel..."
 
-# Create dist directory
-mkdir -p dist
+# Check if we're in the right directory
+if [ ! -f "portfolio-deploy/package.json" ]; then
+    echo "❌ Error: Run this script from the project root directory"
+    exit 1
+fi
 
-# Copy client files to dist
-echo "Copying client files..."
-cp -r client/* dist/
+# Navigate to deployment directory
+cd portfolio-deploy
 
-# Copy attached assets
-echo "Copying assets..."
-cp -r attached_assets dist/assets/
+echo "📦 Installing dependencies..."
+npm install
 
-# Create a simple index.html in root
-echo "Creating production HTML..."
-cat > dist/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarwesh Khairnar - Portfolio</title>
-    <meta name="description" content="Portfolio of Sarwesh Khairnar - Software Engineer, UNESCO Hackathon Winner, and Technical Leader">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="module" crossorigin src="/src/main.tsx"></script>
-    <link rel="stylesheet" href="/src/index.css">
-</head>
-<body>
-    <div id="root"></div>
-</body>
-</html>
-EOF
+echo "🏗️ Building static files..."
+npm run build:static
 
-echo "Static build completed! Files are in the 'dist' directory."
-echo "To deploy to Vercel:"
-echo "1. Run: cd dist && vercel --prod"
-echo "2. Or upload the 'dist' folder to your hosting provider"
+echo "🌐 Deploying to Vercel..."
+npx vercel --prod
+
+echo "✅ Deployment complete!"
+echo "Your portfolio is now live on Vercel! 🎉"
