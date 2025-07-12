@@ -89,19 +89,19 @@ export default function CodingProfilesSection() {
               viewport={{ once: true }}
               className={`bg-gradient-to-br ${profile.bgColor} p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2`}
             >
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <profile.icon className={`${profile.iconColor} mr-3`} size={32} />
-                  <div>
-                    <h3 className="text-xl font-semibold text-navy">{profile.platform}</h3>
-                    <p className="text-charcoal">@{profile.username}</p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 space-y-4 sm:space-y-0">
+                <div className="flex items-center min-w-0 flex-1">
+                  <profile.icon className={`${profile.iconColor} mr-3 flex-shrink-0`} size={32} />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xl font-semibold text-navy truncate">{profile.platform}</h3>
+                    <p className="text-charcoal text-sm truncate">@{profile.username}</p>
                   </div>
                 </div>
                 <a
                   href={profile.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white hover:bg-gray-50 text-navy px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
+                  className="bg-white hover:bg-gray-50 text-navy px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg text-center sm:text-left flex-shrink-0 w-full sm:w-auto"
                 >
                   View Profile
                 </a>
