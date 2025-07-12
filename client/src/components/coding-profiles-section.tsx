@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Trophy, Target, TrendingUp, Star, Award, Twitter } from "lucide-react";
+import { Code, Trophy, Target, TrendingUp, Star, Award, Twitter, Instagram } from "lucide-react";
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
 
 export default function CodingProfilesSection() {
@@ -122,7 +122,7 @@ export default function CodingProfilesSection() {
           ))}
         </div>
 
-        {/* Additional Social Link */}
+        {/* Social Media Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -130,21 +130,41 @@ export default function CodingProfilesSection() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg inline-block">
-            <div className="flex items-center justify-center">
-              <Twitter className="text-blue-500 mr-3" size={24} />
-              <div className="text-left">
-                <h4 className="text-lg font-semibold text-navy">Follow me on X</h4>
-                <p className="text-charcoal">@_int_32</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl shadow-lg">
+              <div className="flex items-center justify-center">
+                <Twitter className="text-blue-500 mr-3" size={24} />
+                <div className="text-left">
+                  <h4 className="text-lg font-semibold text-navy">Follow me on X</h4>
+                  <p className="text-charcoal">@_int_32</p>
+                </div>
+                <a
+                  href="https://x.com/_int_32"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Follow
+                </a>
               </div>
-              <a
-                href="https://x.com/_int_32"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-              >
-                Follow
-              </a>
+            </div>
+            
+            <div className="bg-gradient-to-r from-pink-50 to-purple-100 p-6 rounded-xl shadow-lg">
+              <div className="flex items-center justify-center">
+                <Instagram className="text-pink-500 mr-3" size={24} />
+                <div className="text-left">
+                  <h4 className="text-lg font-semibold text-navy">Follow me on Instagram</h4>
+                  <p className="text-charcoal">@sarweshk_10</p>
+                </div>
+                <a
+                  href="https://www.instagram.com/sarweshk_10/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-4 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Follow
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
