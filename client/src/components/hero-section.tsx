@@ -81,7 +81,7 @@ export default function HeroSection() {
           className="text-lg sm:text-xl text-blue-200 mb-8 max-w-3xl mx-auto"
         >
           UNESCO Hackathon Winner | Smart India Hackathon Champion | 
-          Building Solutions that Impact 2+ Crore Lives
+          Developer By Passion & Profession
         </motion.p>
         
         <motion.div
