@@ -89,7 +89,7 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center">
                 <Medal className="text-gold mr-3" size={20} />
-                <span>Gold Medal from Vice President of India</span>
+                <span>Received Gold Medal from Vice President of India</span>
               </div>
               <div className="flex items-center">
                 <FileText className="text-gold mr-3" size={20} />
