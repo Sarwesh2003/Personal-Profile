@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application built as a personal portfolio website for Sarwesh Khairnar. The application uses a modern tech stack with React for the frontend, Express.js for the backend, and is configured to use PostgreSQL with Drizzle ORM for data persistence. Currently, it implements an in-memory storage system for contact form submissions but is architected to easily transition to a database-backed solution.
+This is a professional portfolio website for Sarwesh Khairnar, converted to a static deployment-ready format for easy hosting on platforms like Vercel, Netlify, or GitHub Pages. The application showcases leadership achievements, hackathon victories, and impactful projects with a focus on societal contributions. The portfolio has been optimized for static hosting with mailto-based contact forms and deployment-ready configurations.
 
 ## User Preferences
 
@@ -10,13 +10,21 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-The application follows a monorepo structure with clear separation between client, server, and shared code:
+The application has been converted to a static deployment format with multiple deployment configurations:
 
+- **Main Development**: Full-stack React + Express.js (for local development)
+- **Static Deployment**: React-only application optimized for static hosting
 - **Frontend**: React with TypeScript, styled using Tailwind CSS and shadcn/ui components
-- **Backend**: Express.js server with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM (configured but not yet implemented)
+- **Contact Form**: mailto-based for static hosting compatibility
 - **Build System**: Vite for frontend bundling and development
-- **Deployment**: Configured for production builds with esbuild for server bundling
+- **Deployment**: Multiple configurations for Vercel, Netlify, and GitHub Pages
+
+## Deployment Structure
+
+- **portfolio-deploy/**: Ready-to-deploy static version with Vercel configuration
+- **portfolio-static/**: Alternative static deployment with minimal dependencies
+- **client/**: Original development frontend
+- **server/**: Development backend (not used in static deployment)
 
 ## Key Components
 
