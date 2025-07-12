@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Smartphone, Leaf, Shield, Users, Percent, TrendingUp, Trophy, Copyright } from "lucide-react";
+import { Smartphone, Leaf, Shield, Users, Percent, TrendingUp, Trophy, Copyright, MapPin, Mouse } from "lucide-react";
 import { FaGithub, FaFirefox } from "react-icons/fa";
 
 export default function ProjectsSection() {
@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       bgColor: "from-blue-50 to-indigo-100",
       iconBg: "bg-navy",
       metric: "2+ Crore",
-      metricLabel: "People Impacted",
+      metricLabel: "Disabled People in India (Gov Initiative Impact)",
       metricIcon: Users,
       technologies: ["Android", "Java", "Firebase", "Maps API"],
       techColor: "bg-navy",
@@ -54,6 +54,23 @@ export default function ProjectsSection() {
       achievementIcon: FaFirefox,
       link: "#",
       linkIcon: FaGithub
+    },
+    {
+      title: "Location Saver",
+      subtitle: "On-the-go Location Saver",
+      description: "Simple mobile app for saving locations on-the-go, built with least click principles and depth over breadth development approach using MVC architecture.",
+      icon: MapPin,
+      bgColor: "from-purple-50 to-violet-100",
+      iconBg: "bg-purple-600",
+      metric: "Minimal",
+      metricLabel: "Clicks Required",
+      metricIcon: Mouse,
+      technologies: ["Android", "Java", "MVC Architecture", "Location Services"],
+      techColor: "bg-purple-600",
+      achievement: "Open Source",
+      achievementIcon: FaGithub,
+      link: "https://github.com/Sarwesh2003/Location-Saver",
+      linkIcon: FaGithub
     }
   ];
 
@@ -74,7 +91,7 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
