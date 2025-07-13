@@ -1,31 +1,30 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Code, CheckCircle } from "lucide-react";
+import { Briefcase, GraduationCap, Code, CheckCircle, ArrowUp } from "lucide-react";
 
 export default function ExperienceSection() {
   const experiences = [
     {
-      title: "Software Engineer-I",
       company: "JPMorgan Chase & Co.",
-      period: "Jul 2024 - Present",
       location: "Mumbai, India",
       icon: Briefcase,
       bgColor: "bg-gold",
-      achievements: [
-        "Leading full-stack development initiatives with expertise in Java, Spring Boot, ReactJS, AngularJS, Oracle SQL, and Kubernetes",
-        "Architected and delivered end-to-end system features for Foreign Exchange operations, driving innovation in financial technology",
-        "Engineered database optimization tools and visualization utilities, significantly enhancing system performance and team productivity"
-      ]
-    },
-    {
-      title: "Software Engineer Intern",
-      company: "JPMorgan Chase & Co.",
-      period: "Jan 2024 - Jun 2024",
-      location: "Mumbai, India",
-      icon: GraduationCap,
-      bgColor: "bg-navy",
-      achievements: [
-        "Led cross-functional collaboration to optimize system performance and enhance functionality across multiple teams",
-        "Spearheaded development of visualization tools for settlement life-cycle, transforming team understanding and operational efficiency"
+      positions: [
+        {
+          title: "Software Engineer-I",
+          period: "Jul 2024 - Present",
+          achievements: [
+            "Leading full-stack development initiatives with expertise in Java, Spring Boot, ReactJS, AngularJS, Oracle SQL, and Kubernetes",
+            "Architected and delivered end-to-end system features for Foreign Exchange operations, driving innovation in financial technology",
+          ]
+        },
+        {
+          title: "Software Engineer Intern",
+          period: "Jan 2024 - Jun 2024",
+          achievements: [
+            "Led cross-functional collaboration to optimize system performance and enhance functionality across multiple teams",
+            "Spearheaded development of visualization tools for settlement life-cycle, transforming team understanding and operational efficiency"
+          ]
+        }
       ]
     },
     {
@@ -75,24 +74,73 @@ export default function ExperienceSection() {
                   <exp.icon className="text-white" size={24} />
                 </div>
                 <div className="flex-1 bg-white p-8 rounded-xl shadow-lg">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                  {exp.positions ? (
+                    // Multi-position experience (JPMorgan)
                     <div>
-                      <h3 className="text-2xl font-semibold text-navy">{exp.title}</h3>
-                      <p className="text-gold font-medium">{exp.company}</p>
-                    </div>
-                    <div className="text-charcoal">
-                      <p className="font-medium">{exp.period}</p>
-                      <p className="text-sm">{exp.location}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-3 text-charcoal">
-                    {exp.achievements.map((achievement, idx) => (
-                      <div key={idx} className="flex items-start">
-                        <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                        <p>{achievement}</p>
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                        <div>
+                          <h3 className="text-2xl font-semibold text-navy">{exp.company}</h3>
+                          <p className="text-gold font-medium">{exp.location}</p>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                      
+                      <div className="space-y-6">
+                        {exp.positions.map((position, posIndex) => (
+                          <div key={posIndex} className="relative">
+                            {posIndex > 0 && (
+                              <div className="flex items-center mb-4">
+                                <div className="flex items-center text-gold font-medium">
+                                  <ArrowUp className="mr-2" size={16} />
+                                  <span className="text-sm">Promoted to</span>
+                                </div>
+                                <div className="flex-1 h-px bg-gray-200 ml-4"></div>
+                              </div>
+                            )}
+                            
+                            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                              <div>
+                                <h4 className="text-xl font-semibold text-navy">{position.title}</h4>
+                              </div>
+                              <div className="text-charcoal">
+                                <p className="font-medium">{position.period}</p>
+                              </div>
+                            </div>
+                            
+                            <div className="space-y-3 text-charcoal">
+                              {position.achievements.map((achievement, idx) => (
+                                <div key={idx} className="flex items-start">
+                                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
+                                  <p>{achievement}</p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    // Single position experience (Summer Internship)
+                    <div>
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                        <div>
+                          <h3 className="text-2xl font-semibold text-navy">{exp.title}</h3>
+                          <p className="text-gold font-medium">{exp.company}</p>
+                        </div>
+                        <div className="text-charcoal">
+                          <p className="font-medium">{exp.period}</p>
+                          <p className="text-sm">{exp.location}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-3 text-charcoal">
+                        {exp.achievements.map((achievement, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
+                            <p>{achievement}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

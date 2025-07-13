@@ -31,7 +31,7 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold text-navy">
-              Award-Winning Leader | International Hackathon Champion | Innovating for Social Impact
+              Developer by Passion & Profession | Innovating for Social Impact
             </h3>
             
             <p className="text-lg text-charcoal leading-relaxed">

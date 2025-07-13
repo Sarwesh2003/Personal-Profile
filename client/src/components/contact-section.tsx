@@ -149,6 +149,15 @@ export default function ContactSection() {
                       <p className="text-charcoal text-sm">PDF format</p>
                     </div>
                   </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Social Media Links */}
+            <Card className="bg-gray-50">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-semibold text-navy mb-6">Social Media</h3>
+                <div className="space-y-4">
                   <a
                     href="https://x.com/_int_32"
                     target="_blank"

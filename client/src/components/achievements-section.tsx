@@ -6,16 +6,16 @@ export default function AchievementsSection() {
     {
       title: "Gold Medal",
       subtitle: "Vice President & Education Minister of India",
-      description: "Honored for exceptional win in UNESCO India-Africa International Hackathon",
+      description: "Honored for exceptional leadership and win in UNESCO India-Africa International Hackathon",
       icon: Medal,
       bgColor: "from-gold to-yellow-600",
       iconBg: "bg-white",
       iconColor: "text-gold"
     },
     {
-      title: "UNESCO Hackathon",
-      subtitle: "International Winner",
-      description: "Led team to victory representing India against 22 countries",
+      title: "Force for Good",
+      subtitle: "Pragatee Foundation",
+      description: "Selected as contributor by JPMorgan to lead performance optimization and scalability initiatives for social impact platform serving 300+ users, driving expansion to 10K-20K user base.",
       icon: Globe,
       bgColor: "from-purple-600 to-purple-800",
       iconBg: "bg-white",
