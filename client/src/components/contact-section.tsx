@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Download, Twitter, Instagram } from "lucide-react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import resumePdf from "@assets/Sarwesh_Resume_1752258083677.pdf";
+import resumePdf from "@assets/Resume.pdf";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
